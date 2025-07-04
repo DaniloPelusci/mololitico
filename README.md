@@ -36,6 +36,16 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+### Running with Spring Boot
+
+After building the Angular project, the output is copied to `api/target/classes/static/`.  Start the backend server to serve these files (secured by Spring Security) with:
+
+```bash
+mvn -pl api spring-boot:run
+```
+
+Once running, access `http://localhost:8081/` to view the Angular application served by Spring Boot.
+
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
